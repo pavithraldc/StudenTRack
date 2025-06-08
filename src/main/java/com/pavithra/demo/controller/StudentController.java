@@ -124,9 +124,16 @@ public class StudentController {
 
         System.out.println("The Number of Teenagers");
 
-
         int countTeenagers = studentService.countTeenagers();
         return countTeenagers ;
+    }
+
+    @GetMapping("/senior-citizens/count")
+    @CrossOrigin(origins = "*") // Allow requests only from specific origin
+    public int countSeniorCitizens() {
+
+        System.out.println("The Number of SeniorCitizens");
+        return studentService.countSeniorCitizens();
     }
 
 }
