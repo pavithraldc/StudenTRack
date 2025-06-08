@@ -133,9 +133,7 @@ public class StudentController {
     public int countSeniorCitizens() {
 
         System.out.println("The Number of SeniorCitizens");
-
-        int countSeniorCitizens = studentService.countSeniorCitizens();
-        return countSeniorCitizens ;
+        return studentService.countSeniorCitizens();
     }
 
 }
