@@ -472,7 +472,22 @@ public class StudentService {
         return teenagersCount;
     }
 
+    public int countSeniorCitizens() {
+        int seniorcitizensCount = 0;
+
+        List<StudentDto> allStudents = getAllStudents();
+
+        for (StudentDto studentDto : allStudents) {
+
+            int age = calculateAge(studentDto.getDob());
+            if (age >= 60) {
+                seniorcitizensCount++;
+            }
+
+        }
+        return seniorcitizensCount;
     }
+}
 
 
 
